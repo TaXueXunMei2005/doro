@@ -1,0 +1,12 @@
+.DS_Store
+/build/
+/build-cache/
+/*.app/
+/position.json
+/local.doro.desktop.plist
+/verification.json
+/使用说明.txt
+/抬爪思考预览.gif
+.env
+.env.*
+*.log
