@@ -43,7 +43,7 @@ final class PetView: NSView {
         cells[row][frameIndex].draw(in:bounds,from:.zero,operation:.sourceOver,fraction:1)
     }
     override func mouseDown(with event:NSEvent) {
-        if event.clickCount==2 { play(4);return }
+        if event.clickCount>=2 { play(4);return }
         dragMouse=NSEvent.mouseLocation;dragOrigin=window?.frame.origin ?? .zero
     }
     override func mouseDragged(with event:NSEvent) {
@@ -52,7 +52,11 @@ final class PetView: NSView {
         window?.setFrameOrigin(NSPoint(x:dragOrigin.x+dx,y:dragOrigin.y+dy))
         play(dx>=0 ? 1:2,seconds:0.25)
     }
-    override func mouseUp(with event:NSEvent) { savePosition?();play(3,seconds:1.2) }
+    override func mouseUp(with event:NSEvent) {
+        savePosition?()
+        // Preserve the jump started by the second mouse-down of a double click.
+        if event.clickCount < 2 { play(3,seconds:1.2) }
+    }
     override func rightMouseDown(with event:NSEvent) { if let m=menu { NSMenu.popUpContextMenu(m,with:event,for:self) } }
 }
 final class PetPanel:NSPanel { override var canBecomeKey:Bool { false };override var canBecomeMain:Bool { false } }
