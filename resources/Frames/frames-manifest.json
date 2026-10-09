@@ -1,17 +1,15 @@
 {
   "ok": true,
-  "chroma_key": {
-    "hex": "#00FF00",
-    "rgb": [
-      0,
-      255,
-      0
-    ],
-    "threshold": 96.0
-  },
+  "revision": "doro-2026-10-09",
+  "atlasSHA256": "872d1e7c360b6c9330826d2e121d60c3c5378ee8446377fd71dd40e9615e4c13",
+  "cellSize": [
+    192,
+    208
+  ],
   "rows": [
     {
       "state": "idle",
+      "atlasRow": 0,
       "frames": [
         "idle/00.png",
         "idle/01.png",
@@ -20,10 +18,11 @@
         "idle/04.png",
         "idle/05.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
     },
     {
       "state": "running-right",
+      "atlasRow": 1,
       "frames": [
         "running-right/00.png",
         "running-right/01.png",
@@ -34,10 +33,11 @@
         "running-right/06.png",
         "running-right/07.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
     },
     {
       "state": "running-left",
+      "atlasRow": 2,
       "frames": [
         "running-left/00.png",
         "running-left/01.png",
@@ -48,20 +48,22 @@
         "running-left/06.png",
         "running-left/07.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
     },
     {
       "state": "waving",
+      "atlasRow": 3,
       "frames": [
         "waving/00.png",
         "waving/01.png",
         "waving/02.png",
         "waving/03.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
     },
     {
       "state": "jumping",
+      "atlasRow": 4,
       "frames": [
         "jumping/00.png",
         "jumping/01.png",
@@ -69,10 +71,39 @@
         "jumping/03.png",
         "jumping/04.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
+    },
+    {
+      "state": "failed",
+      "atlasRow": 5,
+      "frames": [
+        "failed/00.png",
+        "failed/01.png",
+        "failed/02.png",
+        "failed/03.png",
+        "failed/04.png",
+        "failed/05.png",
+        "failed/06.png",
+        "failed/07.png"
+      ],
+      "method": "exact-decoded-atlas-crop"
+    },
+    {
+      "state": "waiting",
+      "atlasRow": 6,
+      "frames": [
+        "waiting/00.png",
+        "waiting/01.png",
+        "waiting/02.png",
+        "waiting/03.png",
+        "waiting/04.png",
+        "waiting/05.png"
+      ],
+      "method": "exact-decoded-atlas-crop"
     },
     {
       "state": "running",
+      "atlasRow": 7,
       "frames": [
         "running/00.png",
         "running/01.png",
@@ -81,7 +112,46 @@
         "running/04.png",
         "running/05.png"
       ],
-      "method": "stable-slots"
+      "method": "exact-decoded-atlas-crop"
+    },
+    {
+      "state": "review",
+      "atlasRow": 8,
+      "frames": [
+        "review/00.png",
+        "review/01.png",
+        "review/02.png",
+        "review/03.png",
+        "review/04.png",
+        "review/05.png"
+      ],
+      "method": "exact-decoded-atlas-crop"
+    },
+    {
+      "state": "look",
+      "atlasRows": [
+        9,
+        10
+      ],
+      "frames": [
+        "look/00.png",
+        "look/01.png",
+        "look/02.png",
+        "look/03.png",
+        "look/04.png",
+        "look/05.png",
+        "look/06.png",
+        "look/07.png",
+        "look/08.png",
+        "look/09.png",
+        "look/10.png",
+        "look/11.png",
+        "look/12.png",
+        "look/13.png",
+        "look/14.png",
+        "look/15.png"
+      ],
+      "method": "exact-decoded-atlas-crop"
     }
   ]
 }
